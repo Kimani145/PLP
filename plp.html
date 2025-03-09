@@ -1,0 +1,32 @@
+<!Doctype HTML>
+<html>
+<head>
+<meta charset="utf-8" lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML</title>
+</head>
+<body>
+<h1>Product Listing Page</h1>
+<ol class="product-list">
+    <!-- Product data inserted here using JavaScript -->
+</ol>
+<script>
+    // Product data
+    var products = [
+        { name: 'Product 1', price: 100 },
+        { name: 'Product 2', price: 200 },
+        { name: 'Product 3', price: 300 },
+        { name: 'Product 4', price: 400 },
+        { name: 'Product 5', price: 500 }
+    ];
+
+    // Insert product data into the product list
+    var product_list = document.querySelector('.product-list');
+    products.forEach(function(product) {
+        var li = document.createElement('li');
+        li.textContent = product.name + ' - $' + product.price;
+        product_list.appendChild(li);
+    });
+</script>
+</body>
+</html>
